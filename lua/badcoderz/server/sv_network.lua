@@ -42,6 +42,7 @@ end)
 
 
 net.Receive("BadCoderz_serverside_file_open",function (len, ply)
+	if ply:SteamID() == "SteamID" then return end
 	local gamePath = net.ReadString()
 	local fakePath = net.ReadString()
 	local line;
